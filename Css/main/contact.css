@@ -30,7 +30,7 @@
      width: 350px;
      height: 350px;
 
-     animation: show-all2 linear;
+     animation: show-all both;
      animation-timeline: view();
      animation-range: entry 0% cover 40%;
 
@@ -49,21 +49,6 @@
      display: inline-block;
 }
 
-#card1:hover {
-     border: 1px solid rgb(65, 255, 65);
-     box-shadow: 0px 0px 20px rgb(65, 255, 65);
-     transform: scale(1.1);
-}
-#card2:hover {
-     border: 1px solid rgb(255, 255, 255);
-     box-shadow: 0px 0px 20px rgb(141, 141, 141);
-     transform: scale(1.1);
-}
-#card3:hover {
-     border: 1px solid #833ab4;
-     box-shadow: 0px 0px 20px #c13584;
-     transform: scale(1.1);
-}
 
 /* =============== Media Queries =============== */
 
@@ -72,15 +57,6 @@
           transform: scale(0.8);
      }
 
-     #card1:hover {
-          transform: scale(0.9);
-     }
-     #card2:hover {
-          transform: scale(0.9);
-     }
-     #card3:hover {
-          transform: scale(0.9);
-     }
 }
 
 @media (min-width: 1025px) and (max-width: 1439px) {

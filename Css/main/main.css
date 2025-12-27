@@ -79,10 +79,10 @@ body {
      grid-template-columns: repeat(2, 1fr);
      grid-template-rows: repeat(1, 1fr);
      padding-top: 100px;
-     height: 100vh;
+     min-height: 100vh;
      visibility: hidden;
      opacity: 0;
-     margin-bottom: 100px;
+     margin-bottom: 50px;
 
      animation: show-content 1.6s linear forwards;
 }
@@ -209,7 +209,6 @@ body {
      margin-top: 50px;
 }
 
-
 /* =============== hovers and focus =============== */
 
 .link:hover,
@@ -282,11 +281,13 @@ body {
 
      .links {
           display: none;
+          opacity: 0;
           flex-direction: column;
           gap: 15px;
           width: 100%;
           text-align: center;
           padding-top: 20px;
+          transition: 0.5s;
      }
 
      .nav-toggle-label {
@@ -301,18 +302,16 @@ body {
      .nav-toggle-label span {
           display: block;
           width: 25px;
-          height: 3px;
+          height: 4px;
           background: var(--Fonts-color);
           margin: 5px 0;
           transition: 0.4s;
           border-radius: 2px;
      }
 
-
      #nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
           transform: rotate(-45deg) translate(-5px, 6px);
      }
-
 
      #nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
           opacity: 0;
@@ -323,6 +322,7 @@ body {
 
      /* Open Menu */
      #nav-toggle:checked ~ .links {
+          opacity: 1;
           display: flex;
      }
 
@@ -379,6 +379,8 @@ body {
      }
 
      .soical {
+          font-size: 25px;
+          padding: 17px;
           left: 0; /* Reset relative positioning */
           margin: 5px;
      }
