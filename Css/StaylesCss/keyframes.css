@@ -1,0 +1,64 @@
+/* =============== kyeframes =============== */
+
+@keyframes display-text-im {
+     25%,
+     100% {
+          display: none;
+     }
+}
+
+@keyframes show-content {
+     100% {
+          visibility: visible;
+          opacity: 1;
+     }
+}
+
+@keyframes fill-text {
+     10%,
+     100% {
+          width: 0px;
+     }
+
+     70%,
+     90% {
+          width: 100%;
+     }
+}
+
+@keyframes fill-text-name {
+     10%,
+     100% {
+          width: 0px;
+     }
+
+     70%,
+     90% {
+          width: 100%;
+     }
+}
+
+
+@keyframes show-all {
+     from {
+          opacity: 0;
+          scale: .5;
+     }
+
+     to {
+          opacity: 1;
+          scale: 1;
+     }
+}
+
+@keyframes show-all2 {
+     from {
+          opacity: 0;
+          scale: .5;
+     }
+
+     to {
+          opacity: 1;
+          scale: 1;
+     }
+}

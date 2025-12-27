@@ -1,3 +1,4 @@
+@import url(../StaylesCss/keyframes.css);
 @import url(../StaylesCss/colors.css);
 
 * {
@@ -22,7 +23,7 @@ body {
 
 .navbar {
      width: 100%;
-     background-color: var(--nav-color);
+     background-color: rgb(0 0 0 / 50%);
      z-index: 10000;
      position: fixed;
      padding: 15px;
@@ -40,11 +41,16 @@ body {
 
 /* =============== navbar-content =============== */
 
+.nav-toggle,
+.nav-toggle-label {
+     display: none;
+}
+
 .name {
      font-family: "BBH Bogle", sans-serif;
      font-size: 35px;
      letter-spacing: 3px;
-     cursor: pointer;
+     cursor: default;
      padding-left: 10px;
      transition: 0.5s;
      width: fit-content;
@@ -76,6 +82,7 @@ body {
      height: 100vh;
      visibility: hidden;
      opacity: 0;
+     margin-bottom: 100px;
 
      animation: show-content 1.6s linear forwards;
 }
@@ -108,7 +115,7 @@ body {
      font-size: 40px;
      font-family: "BBH Bogle", sans-serif;
      display: block;
-     cursor: pointer;
+     cursor: default;
 }
 
 .me {
@@ -120,7 +127,7 @@ body {
      display: inline-block;
      color: transparent;
      -webkit-text-stroke: 0.7px var(--hoverf--color);
-     animation: display-teaxt 16s linear infinite;
+     animation: display-text-im 16s linear infinite;
      animation-delay: calc(-4s * var(--i));
 }
 .im::before {
@@ -191,33 +198,17 @@ body {
      color: var(--Main-color);
 }
 
-/* =============== kyeframes =============== */
+/* =============== Footer =============== */
 
-@keyframes display-teaxt {
-     25%,
-     100% {
-          display: none;
-     }
+.footer-pra {
+     text-align: center;
+     padding: 15px;
+     background-color: rgb(0 0 0 / 50%);
+     color: var(--Fonts-color);
+     font-size: 16px;
+     margin-top: 50px;
 }
 
-@keyframes show-content {
-     100% {
-          visibility: visible;
-          opacity: 1;
-     }
-}
-
-@keyframes fill-text {
-     10%,
-     100% {
-          width: 0px;
-     }
-
-     70%,
-     90% {
-          width: 100%;
-     }
-}
 
 /* =============== hovers and focus =============== */
 
@@ -274,7 +265,7 @@ body {
      .navbar {
           grid-template-columns: 1fr;
           height: auto;
-          position: relative;
+          position: fixed;
           text-align: center;
           padding-bottom: 20px;
           animation: none;
@@ -290,15 +281,56 @@ body {
      }
 
      .links {
+          display: none;
           flex-direction: column;
           gap: 15px;
+          width: 100%;
+          text-align: center;
+          padding-top: 20px;
+     }
+
+     .nav-toggle-label {
+          display: block;
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          cursor: pointer;
+          z-index: 10001; /* Above navbar background */
+     }
+
+     .nav-toggle-label span {
+          display: block;
+          width: 25px;
+          height: 3px;
+          background: var(--Fonts-color);
+          margin: 5px 0;
+          transition: 0.4s;
+          border-radius: 2px;
+     }
+
+
+     #nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+     }
+
+
+     #nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+          opacity: 0;
+     }
+     #nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+     }
+
+     /* Open Menu */
+     #nav-toggle:checked ~ .links {
+          display: flex;
      }
 
      .home {
           grid-template-columns: 1fr;
           grid-template-rows: auto auto;
           height: auto;
-          padding-top: 20px;
+          padding-top: 200px;
           animation: none;
           visibility: visible;
           opacity: 1;

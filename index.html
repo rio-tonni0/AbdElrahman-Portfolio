@@ -5,6 +5,9 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="./Css/main/main.css">
+     <link rel="stylesheet" href="./Css/main/about-me.css">
+     <link rel="stylesheet" href="./Css/main/skills.css">
+     <link rel="stylesheet" href="./Css/main/contact.css">
      <!--  Css File -->
      <link rel="icon" href="./images/Web-icone.jpg">
      <!--  Icone  -->
@@ -26,15 +29,22 @@
 <body>
 
      <div class="navbar">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
           <div class="name">
                AbdelRahman
           </div>
 
+          <label for="nav-toggle" class="nav-toggle-label">
+               <span></span>
+               <span></span>
+               <span></span>
+          </label>
+
           <div class="links">
                <a href="#home" class="link">Home</a>
                <a href="#about" class="link">About Me</a>
-               <a href="#skills" class="link">Skills</a>
-               <a href="#projects" class="link">Projects</a>
+               <!-- <a href="#skills" class="link">Skills</a> -->
+               <a href="https://github.com/rio-tonni0" class="link" target="_blank">Projects</a>
                <a href="#contact" class="link">Contact Me</a>
           </div>
      </div>
@@ -78,19 +88,80 @@
                          <a href="mailto:abdomoreda20.07@gmail.com" class="soical" target="_blank"><i
                                    class='bxl  bx-gmail'></i></a>
                     </div>
+               </div>
+          </div>
+     </div>
+     <br>
+     <div class="about-me-home" id="about">
 
+          <div class="name-about">
+               I'm
+               <span style="--n:4" class="name-about-me" data-text="AbdElrahman Mohamed">AbdElrahman Mohamed</span>
+               <span style="--n:3" class="name-about-me" data-text="Alshrif">Alshrif</span>
+               <span style="--n:2" class="name-about-me" data-text="Rio">Rio</span>
+               <span style="--n:1" class="name-about-me" data-text="Developer">Developer</span>
 
-
-
+               <div class="content-aboutme">
+                    <p class="about-me-pra">
+                         I'm AbdElrahman Mohamed, a passionate Frontend Developer dedicated to crafting engaging and
+                         user-friendly web experiences. With a keen eye for design and a commitment to clean, efficient
+                         code, I strive to bring ideas to life in the digital realm. Explore my portfolio to see how I
+                         blend creativity with technical expertise to build websites that not only look great but also
+                         function seamlessly.
+                    </p>
                </div>
 
-
-
-
           </div>
+     </div>
+
+
+
+     <!-- <div class="skills-home">
+
+     </div> -->
+
+
+
+     <div class="cards" id="contact">
+
+          <div class="card" id="card1">
+               <h2 class="card-name">
+                    Whatsapp
+               </h2>
+
+               <p class="p-card">
+                    +201016215719
+               </p>
+          </div>
+
+          <div class="card" id="card2">
+               <h2 class="card-name">
+                    E-mail
+               </h2>
+
+               <p class="p-card">
+                    abdomoreda20.07@gmail.com
+               </p>
+          </div>
+
+          <div class="card" id="card3">
+               <h2 class="card-name">
+                    Instagram
+               </h2>
+
+               <p class="p-card">
+                    pan_.0_
+               </p>
+          </div>
+
+     </div>
+
 
 </body>
 
+<footer>
+     <p class="footer-pra">© 2026 AbdElrahman Mohamed. All rights reserved.</p>
+</footer>
 
 
 </html>

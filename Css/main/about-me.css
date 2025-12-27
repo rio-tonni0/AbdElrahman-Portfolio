@@ -1,0 +1,150 @@
+@import url(../StaylesCss/colors.css);
+@import url(./main.css);
+@import url(../StaylesCss/keyframes.css);
+
+/* =============== About Page =============== */
+
+.about-me-home {
+     display: flex;
+     padding-top: 150px;
+     visibility: hidden;
+     opacity: 0;
+     width: 100%;
+     height: 100vh;
+
+     animation: show-content 1.6s linear forwards;
+}
+
+/* =============== About Page Content =============== */
+
+.name-about {
+     padding-left: 25px;
+     font-size: 40px;
+     font-weight: bold;
+     position: absolute;
+     cursor: default;
+     width: fit-content;
+
+     animation: show-all linear;
+     animation-timeline: view();
+     animation-range: entry 0% cover 40%;
+}
+
+.name-about-me {
+     position: relative;
+     display: inline-block;
+     color: transparent;
+     -webkit-text-stroke: 0.7px var(--hoverf--color);
+     animation: display-text-im 16s linear infinite;
+     animation-delay: calc(-4s * var(--n));
+}
+
+.name-about-me::before {
+     content: attr(data-text);
+     position: absolute;
+     width: 0%;
+     border-right: 2px solid var(--hoverf--color);
+     color: var(--hoverf--color);
+     white-space: nowrap;
+     overflow: hidden;
+
+     animation: fill-text-name 4s linear infinite;
+}
+
+.content-aboutme {
+     display: flex;
+     border-bottom: 1px solid var(--hoverf--color);
+     margin-left: 100px;
+     margin-top: 50px;
+     padding: 20px;
+     width: 1200px;
+}
+
+.about-me-pra {
+     font-size: 20px;
+     line-height: 1.6;
+     color: var(--Fonts-color);
+     display: flex;
+     flex-wrap: wrap;
+}
+
+
+
+
+/* =============== Media Queries =============== */
+
+/* Tablet and smaller screens */
+@media (max-width: 1250px) {
+     .content-aboutme {
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 30px;
+     }
+
+     .name-about {
+          width: 100%;
+          text-align: center;
+          padding-left: 0;
+          display: block;
+     }
+}
+
+@media (max-width: 992px) {
+     .about-me-home {
+          padding-top: 100px;
+          height: auto;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 50px;
+     }
+
+     .name-about {
+          position: relative;
+          margin-bottom: 30px;
+          font-size: 35px;
+          border-bottom: 1px solid var(--hoverf--color);
+     }
+
+     .content-aboutme {
+          margin-left: 0;
+          width: 90%;
+          border-bottom: none;
+          padding: 20px 15px;
+     }
+
+     .about-me-pra {
+          /* font-size: 18px; */
+          text-align: center;
+     }
+}
+
+@media (max-width: 768px) {
+     .about-me-home {
+          padding-top: 120px;
+     }
+
+     .name-about {
+          font-size: 26px;
+     }
+
+     .content-aboutme {
+          width: 95%;
+          padding: 10px;
+     }
+
+     /* .about-me-pra {
+          font-size: 16px;
+     } */
+}
+
+@media (max-width: 480px) {
+     .name-about {
+          font-size: 20px;
+     }
+
+     .content-aboutme {
+          width: 100%;
+          padding: 10px 5px;
+     }
+}
