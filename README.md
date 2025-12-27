@@ -10,12 +10,3 @@ Welcome to my portfolio project! This is a custom-built website created from scr
 ## 🛠️ Tech Stack
 * **HTML5**
 * **CSS3** (Focusing on Grid & Flexbox)
-
-## 🚧 Work in Progress
-This project is currently a **Work in Progress (WIP)**. I am continuously:
-* Adding more sections.
-* Refining the UI/UX.
-* Improving responsiveness for all devices.
-* Optimizing the code for better performance.
-
-Stay tuned for more updates!
