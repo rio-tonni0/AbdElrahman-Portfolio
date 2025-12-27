@@ -69,6 +69,7 @@ body {
      font-size: 17px;
      transition: 0.5s;
      cursor: pointer;
+     padding-bottom: 2px;
 }
 
 /* =============== home page =============== */
@@ -173,10 +174,6 @@ body {
      transition: 0.5s;
 }
 
-.btn:hover {
-     background-color: var(--Main-color);
-     color: var(--hoverf--color);
-}
 
 .soical {
      display: inline-flex;
@@ -193,11 +190,6 @@ body {
      transition: 0.5s;
 }
 
-.soical:hover {
-     background-color: var(--hoverf--color);
-     color: var(--Main-color);
-}
-
 /* =============== Footer =============== */
 
 .footer-pra {
@@ -209,12 +201,26 @@ body {
      margin-top: 50px;
 }
 
-/* =============== hovers and focus =============== */
+/* =============== Hovers =============== */
 
 .link:hover,
 .name:hover {
      color: var(--hoverf--color);
      text-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+.link:hover{
+     border-bottom: 1px solid var(--hoverf--color);
+}
+
+.soical:hover {
+     background-color: var(--hoverf--color);
+     color: var(--Main-color);
+}
+
+.btn:hover {
+     background-color: var(--Main-color);
+     color: var(--hoverf--color);
 }
 
 /* =============== Media Queries =============== */
@@ -238,8 +244,8 @@ body {
      }
 
      #image {
-          width: 300px;
-          height: 300px;
+          width: 280px;
+          height: 280px;
      }
 
      .name-con {
@@ -255,6 +261,10 @@ body {
      }
 
      .soical {
+          font-size: 15px;
+     }
+
+     .prag{
           font-size: 15px;
      }
 }
